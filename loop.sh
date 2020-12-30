@@ -2,6 +2,7 @@
 #uncomment what youd like to run for now because i suck at bash scripting
 #based on https://unix.stackexchange.com/questions/7011/how-to-loop-over-the-lines-of-a-file
 #usage is ./sslscan.sh <inputfile>
+#for text output use > outputfile.txt etc
 
 #useful command:
 #expand cidr with nmap
@@ -29,8 +30,8 @@ while IFS= read -r line; do
     #test for tcp timestamps, edit the port number you are attempting
     #hping3 -S -c 2 $line -p 443 --tcp-timestamp
 
-    #Responder's RunFinger.py with greppable output
-    #./RunFinger.py -g -i $line
+    #Responder's RunFinger.py with greppable output. must be in your path or in the tools dir
+    #python3 RunFinger.py -g -i $line
 
     #chromium web screenshot with ip as filename
     #chromium --headless --disable-gpu --screenshot https://$line --screenshot=$line.png
