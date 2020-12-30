@@ -32,8 +32,8 @@ while IFS= read -r line; do
     #Responder's RunFinger.py with greppable output
     #./RunFinger.py -g -i $line
 
-    #chromium web screenshot
-    #chromium --headless --disable-gpu --screenshot https://$line
+    #chromium web screenshot with ip as filename
+    #chromium --headless --disable-gpu --screenshot https://$line --screenshot=$line.png
 
     #ike aggressive mode check
     #sudo ike-scan -M -A -n foo $line -P
